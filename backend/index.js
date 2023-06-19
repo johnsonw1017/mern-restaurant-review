@@ -11,11 +11,9 @@ MongoClient.connect(
     process.env.RESTREVIEWS_DB_URI,
     {
         //limit number of connections to 50
-        poolSize: 50,
-        wtimeout: 2500,
-        useNewUrlParser: true
-    }
-    )
+        //poolSize: 50,
+        wtimeoutMS: 2500
+    })
     .catch(error => {
         console.error(error.stack)
         process.exit(1)
